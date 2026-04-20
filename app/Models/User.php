@@ -16,7 +16,7 @@ class User extends Authenticatable
         'middle_name',
         'last_name',
         'dob',
-        'gender', // change from sex → gender (match your form)
+        'sex',
         'address',
         'contact_number',
         'email',
