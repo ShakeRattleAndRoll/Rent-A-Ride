@@ -3,10 +3,12 @@
 **UI(NOW)** -> **VALIDATION** -> **DATABASE** -> **TEST**
 
 ### UI:
-* **HOMEPAGE** <- NOW
 * LOGIN
+* **HOMEPAGE** <- NOW
+* AVAILABLE CARS
 * POST-A-CAR
-* **GARAGE:** * MYLISTING
+* **GARAGE:**
+    * MYLISTING
     * MYRENTAL
 * MESSAGE
 * PROFILE
