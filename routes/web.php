@@ -25,3 +25,18 @@ Route::get('/', function () {
 
 Route::get('/post-car', [CarController::class, 'create']);
 Route::post('/cars', [CarController::class, 'store']);
+
+//Route for available cars page
+Route::get('/available', function () {
+    return view('available_cars.main');
+});
+
+// Route for profile page
+Route::get('/profile', function () {
+    return view('profile.main');
+});
+
+//Route for edit profile page
+Route::get('/profile/edit', function () {
+    return view('profile.edit');
+});
