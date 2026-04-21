@@ -37,7 +37,7 @@
         </a>
 
         <a href="/profile" 
-           class="px-4 py-2 rounded-full transition-all duration-200 {{ request()->is('profile') ? 'bg-lime-400 text-black font-bold' : 'text-white hover:text-lime-400' }}">
+        class="px-4 py-2 rounded-full transition-all duration-200 {{ request()->is('profile*') ? 'bg-lime-400 text-black font-bold' : 'text-white hover:text-lime-400' }}">
             Profile
         </a>
     </div>
