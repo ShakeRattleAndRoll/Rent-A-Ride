@@ -25,7 +25,7 @@
             </div>
             <p class="text-white font-bold text-sm text-right">
                 ₱{{ number_format($car->price) }}
-                <span class="text-gray-400 font-normal">/{{ $car->rent_period }}</span>
+                <span class="text-gray-400 font-normal">/{{ $car->rent_period }} per day</span>
             </p>
         </div>
 

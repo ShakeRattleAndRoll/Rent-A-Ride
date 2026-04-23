@@ -8,9 +8,11 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
+// Route for login
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate']);
 
+// Route for register
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'store']);
 
@@ -27,9 +29,7 @@ Route::get('/post-car', [CarController::class, 'create']);
 Route::post('/cars', [CarController::class, 'store']);
 
 //Route for available cars page
-Route::get('/available', function () {
-    return view('available_cars.main');
-});
+Route::get('/available', [CarController::class, 'index']);
 
 // Route for profile page
 Route::get('/profile', function () {
