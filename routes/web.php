@@ -40,3 +40,9 @@ Route::get('/profile', function () {
 Route::get('/profile/edit', function () {
     return view('profile.edit');
 });
+
+//Route for message page
+Route::get('/messages', function () {
+    return view('message.message');
+});
+
