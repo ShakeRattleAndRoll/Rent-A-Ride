@@ -46,3 +46,15 @@ Route::get('/messages', function () {
     return view('message.message');
 });
 
+//Routes for garage page
+Route::get('/garage', function () {
+    return redirect('/garage/my-listing');
+});
+
+Route::get('/garage/my-listing', function () {
+    return view('garage.my-listing', ['listings' => []]);
+});
+
+Route::get('/garage/my-rental', function () {
+    return view('garage.my-rental', ['rentals' => []]);
+});
