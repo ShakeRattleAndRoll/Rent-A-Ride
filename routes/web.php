@@ -45,3 +45,4 @@ Route::get('/profile/edit', function () {
 Route::get('/messages', function () {
     return view('message.message');
 });
+
