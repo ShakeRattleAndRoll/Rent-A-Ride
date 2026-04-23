@@ -13,6 +13,14 @@ class CarController extends Controller
         return view('post.main'); 
     }
 
+    // get all of car database
+    public function index()
+    {
+        $cars = Car::all(); 
+
+        return view('available_cars.main', ['cars'=>$cars]);
+    }
+
     public function store(Request $request)
     {
 
@@ -22,10 +30,10 @@ class CarController extends Controller
             'brand'        => ['required', 'string'],
             'model'        => ['required', 'string'],
             'price'        => ['required', 'numeric'],
-            'rent_period'  => ['required', 'string'],
+            'rent_period'  => ['required', 'integer'],
             'transmission' => ['required'],
             'fuel_type'    => ['required'],
-            'description'  => ['required', 'string'],
+            'description'  => ['nullable','string'],
         ]);
 
         if ($request->hasFile('car_image')) {
@@ -34,6 +42,6 @@ class CarController extends Controller
 
         Car::create($attributes);
 
-        return redirect()->back();
+        return redirect()->back()->with( 'feedback', 'Car Added Successfully!');
     }
 }
