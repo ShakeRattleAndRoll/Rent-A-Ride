@@ -32,13 +32,64 @@
                        class="w-full pl-14 pr-6 py-4 rounded-full bg-[#1a1a1a] text-white border border-white/10 outline-none focus:border-yellow-400 transition-all shadow-lg placeholder:text-gray-600">
                 
             </div>
+
         </div>
     </div>
 
     <section class="py-20 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-2xl font-bold text-white mb-10" style="font-family: 'Montserrat', sans-serif;">???</h2>
+        <div class="max-w-7xl mx-auto px-6 text-center" style="font-family: 'Montserrat', sans-serif;">
+
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                Welcome to <span class="text-lime-400">Rent My Ride</span>
+            </h2>
+
+            <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-16">
+                Your trusted platform for hassle-free car rentals. Whether you're looking to rent a car for your next adventure or earn money by listing your vehicle, we've got you covered with a seamless and secure experience.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+
+                @include('home.cards', [
+                    'icon' => 'fa-solid fa-car',
+                    'title' => 'Wide Selection',
+                    'description' => 'Browse through hundreds of vehicles ranging from economy cars to luxury sports cars. Find the perfect ride for any occasion.'
+                ])
+
+                @include('home.cards', [
+                    'icon' => 'fa-solid fa-sack-dollar',
+                    'title' => 'Earn Money',
+                    'description' => 'Have a car sitting idle? List it on our platform and start earning passive income while helping others get on the road.'
+                ])
+
+                @include('home.cards', [
+                    'icon' => 'fa-solid fa-shield-halved',
+                    'title' => 'Safe & Secure',
+                    'description' => 'All transactions are protected with advanced security measures. Your safety and privacy are our top priorities.'
+                ])
+
+                @include('home.cards', [
+                    'icon' => 'fa-solid fa-comments',
+                    'title' => 'Direct Communication',
+                    'description' => 'Connect directly with car owners to ask questions and arrange bookings easily.'
+                ])
+
+                @include('home.cards', [
+                    'icon' => 'fa-solid fa-tags',
+                    'title' => 'Affordable Pricing',
+                    'description' => 'Find rental cars that fit your budget without compromising quality.'
+                ])
+
+                @include('home.cards', [
+                    'icon' => 'fa-solid fa-location-dot',
+                    'title' => 'Nearby Rentals',
+                    'description' => 'Discover cars available near your location for faster pickup and convenience.'
+                ])
+
+            </div>
+
         </div>
     </section>
+
+    @include('home.how_it_works')
 
 </x-layout>
